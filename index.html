@@ -196,20 +196,10 @@ html{scroll-padding-top:68px;}
 </div>
 </section>
 
-<!-- DISCLAIMER -->
-<section>
-<div class="container">
-  <div class="disclaimer">
-    <i class="fas fa-triangle-exclamation"></i>
-    <p><strong>⚠️ Disclaimer:</strong> Seluruh konten di website ini ditujukan <strong>hanya untuk keperluan edukasi, CTF (Capture The Flag), dan lab/environment yang sudah mendapat izin</strong>. Menggunakan teknik ini terhadap sistem tanpa izin adalah <strong>ilegal dan dapat dipidana</strong>. Selalu pastikan kamu punya izin tertulis sebelum melakukan pengujian apapun. Jadilah ethical hacker, bukan kriminal.</p>
-  </div>
-</div>
-</section>
-
 <!-- OS RECOMMENDATIONS -->
 <section id="os">
 <div class="container">
-  <div class="section-title">🐧 distro linux untuk security</div>
+  <div class="section-title"> distro linux untuk security</div>
   <p class="section-sub">Rekomendasi OS Linux terbaik untuk ethical hacking, CTF, dan riset keamanan</p>
   <div class="os-grid" id="osGrid">
     <!-- akan diisi JS -->
@@ -220,7 +210,7 @@ html{scroll-padding-top:68px;}
 <!-- TOOLS -->
 <section id="tools">
 <div class="container">
-  <div class="section-title">🛠️ hacking tools & repositories</div>
+  <div class="section-title"> hacking tools & repositories</div>
   <p class="section-sub">Tools untuk digunakan di environment lab, CTF, dan authorized penetration testing</p>
   <div class="tools-grid" id="toolsGrid">
     <!-- akan diisi JS -->
@@ -231,7 +221,7 @@ html{scroll-padding-top:68px;}
 <!-- MATERI -->
 <section id="materi">
 <div class="container">
-  <div class="section-title">📚 security materials</div>
+  <div class="section-title"> security materials</div>
   <p class="section-sub">Klik kartu untuk membaca materi lengkap dengan contoh command dan penjelasan mendalam</p>
   <div class="tab-nav" id="tabNav">
     <!-- tab buttons akan diisi JS -->
@@ -245,7 +235,7 @@ html{scroll-padding-top:68px;}
 <!-- FAQ -->
 <section id="faq">
 <div class="container">
-  <div class="section-title">❓ frequently asked questions</div>
+  <div class="section-title"> frequently asked questions</div>
   <p class="section-sub">Pertanyaan umum seputar belajar ethical hacking dan keamanan siber</p>
   <div class="faq-list" id="faqList">
     <!-- akan diisi JS -->
@@ -256,7 +246,7 @@ html{scroll-padding-top:68px;}
 <!-- GITHUB -->
 <section id="github">
 <div class="container">
-  <div class="section-title">🐙 github repositories</div>
+  <div class="section-title"> github repositories</div>
   <div class="tools-grid">
     <div class="tool-card"><h3>PsychoH4x0r</h3><p>Semua project tersedia di GitHub: usb-ducky, network-attack, webshell (lab), AI research, kernel custom, change-ip, scraping-url. Star dan fork untuk mendukung riset open source.</p><div class="tool-tags"><span class="tool-tag">open source</span><span class="tool-tag">pentest tools</span><span class="tool-tag">research</span></div><a href="https://github.com/PsychoH4x0r" target="_blank" class="repo-link"><i class="fab fa-github"></i> visit profile →</a></div>
   </div>
@@ -284,12 +274,12 @@ html{scroll-padding-top:68px;}
 
 // OS Data
 const OS_DATA = [
-  { icon: "🐉", name: "Kali Linux", badge: "PALING POPULER", desc: "Distro #1 untuk penetration testing. Dikembangkan oleh Offensive Security, sudah pre-install 600+ tools hacking (nmap, metasploit, burpsuite, wireshark, dll). Cocok untuk pemula sampai profesional.", tags: ["600+ tools built-in", "Rolling release", "ARM support", "Live boot"] },
-  { icon: "🦜", name: "Parrot OS", badge: "PALING RINGAN", desc: "Alternatif Kali yang lebih ringan dan cocok untuk laptop spek rendah. Ada dua varian: Security Edition (hacking) dan Home Edition (daily use). UI lebih friendly, RAM usage lebih hemat.", tags: ["RAM hemat", "Daily use friendly", "Anonimitas built-in", "Debian-based"] },
-  { icon: "🕵️", name: "Tails OS", badge: "PALING AMAN", desc: "Distro yang fokus pada anonimitas dan privasi. Semua traffic dirutekan melalui Tor network. Tidak meninggalkan jejak di komputer (amnesia OS). Ideal untuk riset anonim dan whistleblower.", tags: ["100% Tor routing", "No trace", "Amnesia mode", "Live USB only"] },
-  { icon: "🖥️", name: "BlackArch Linux", badge: "UNTUK ADVANCED", desc: "Repo terbesar di dunia dengan 2800+ security tools. Berbasis Arch Linux, jadi butuh pengetahuan Linux yang cukup. Lebih fleksibel dari Kali tapi membutuhkan konfigurasi manual lebih banyak.", tags: ["2800+ tools", "Arch-based", "Highly customizable", "Rolling release"] },
-  { icon: "🔴", name: "REMnux", badge: "MALWARE ANALYSIS", desc: "Distro khusus untuk analisis malware dan reverse engineering. Tools untuk membedah file berbahaya, analisis network, dan forensik digital. Sangat berguna untuk blue team dan incident response.", tags: ["Malware sandbox", "RE tools", "Blue team", "DFIR ready"] },
-  { icon: "🐧", name: "Ubuntu Server", badge: "UNTUK LAB", desc: "Bukan distro hacking, tapi sangat berguna sebagai target lab atau server untuk eksperimen. Konfigurasi mudah, komunitas besar, dan bisa diatur sebagai mesin vulnerable dengan Metasploitable.", tags: ["Lab target", "Komunitas besar", "Dokumentasi lengkap", "VM friendly"] }
+  { icon: "", name: "Kali Linux", badge: "PALING POPULER", desc: "Distro #1 untuk penetration testing. Dikembangkan oleh Offensive Security, sudah pre-install 600+ tools hacking (nmap, metasploit, burpsuite, wireshark, dll). Cocok untuk pemula sampai profesional.", tags: ["600+ tools built-in", "Rolling release", "ARM support", "Live boot"] },
+  { icon: "", name: "Parrot OS", badge: "PALING RINGAN", desc: "Alternatif Kali yang lebih ringan dan cocok untuk laptop spek rendah. Ada dua varian: Security Edition (hacking) dan Home Edition (daily use). UI lebih friendly, RAM usage lebih hemat.", tags: ["RAM hemat", "Daily use friendly", "Anonimitas built-in", "Debian-based"] },
+  { icon: "", name: "Tails OS", badge: "PALING AMAN", desc: "Distro yang fokus pada anonimitas dan privasi. Semua traffic dirutekan melalui Tor network. Tidak meninggalkan jejak di komputer (amnesia OS). Ideal untuk riset anonim dan whistleblower.", tags: ["100% Tor routing", "No trace", "Amnesia mode", "Live USB only"] },
+  { icon: "", name: "BlackArch Linux", badge: "UNTUK ADVANCED", desc: "Repo terbesar di dunia dengan 2800+ security tools. Berbasis Arch Linux, jadi butuh pengetahuan Linux yang cukup. Lebih fleksibel dari Kali tapi membutuhkan konfigurasi manual lebih banyak.", tags: ["2800+ tools", "Arch-based", "Highly customizable", "Rolling release"] },
+  { icon: "", name: "REMnux", badge: "MALWARE ANALYSIS", desc: "Distro khusus untuk analisis malware dan reverse engineering. Tools untuk membedah file berbahaya, analisis network, dan forensik digital. Sangat berguna untuk blue team dan incident response.", tags: ["Malware sandbox", "RE tools", "Blue team", "DFIR ready"] },
+  { icon: "", name: "Ubuntu Server", badge: "UNTUK LAB", desc: "Bukan distro hacking, tapi sangat berguna sebagai target lab atau server untuk eksperimen. Konfigurasi mudah, komunitas besar, dan bisa diatur sebagai mesin vulnerable dengan Metasploitable.", tags: ["Lab target", "Komunitas besar", "Dokumentasi lengkap", "VM friendly"] }
 ];
 
 // Tools Data
@@ -355,12 +345,12 @@ const FAQ_DATA = [
 
 // Tab configuration
 const TABS = [
-  { id: "web", label: "🌐 web security" },
-  { id: "linux", label: "🐧 linux commands" },
-  { id: "network", label: "📡 network pentest" },
-  { id: "targeting", label: "🎯 web targeting" },
-  { id: "osint", label: "🔍 osint tools" },
-  { id: "exploit", label: "💥 exploit & rce" }
+  { id: "web", label: " web security" },
+  { id: "linux", label: " linux commands" },
+  { id: "network", label: " network pentest" },
+  { id: "targeting", label: " web targeting" },
+  { id: "osint", label: " osint tools" },
+  { id: "exploit", label: " exploit & rce" }
 ];
 
 // ==================== RENDER FUNCTIONS ====================
